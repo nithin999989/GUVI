@@ -1,1 +1,56 @@
+<!-- index.html -->
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <!-- Include your CSS stylesheets here if any -->
+    <link rel="stylesheet" href="path/to/your/style.css">
+</head>
+<body>
+
+    <!-- Navigation Section -->
+    <nav>
+        <ul>
+            <li><a href="#loginSection">Login</a></li>
+            <li><a href="#registerSection">Register</a></li>
+        </ul>
+    </nav>
+
+    <!-- Login Section -->
+    <div id="loginSection">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <!-- Add your login form fields here -->
+            <input type="text" id="email" placeholder="Email">
+            <input type="password" id="password" placeholder="Password">
+            <button type="button" onclick="submitLoginForm()">Login</button>
+        </form>
+    </div>
+
+    <!-- Register Section -->
+    <div id="registerSection">
+        <h2>Register</h2>
+        <form id="registerForm">
+            <!-- Add your registration form fields here -->
+            <input type="text" id="regEmail" placeholder="Email">
+            <input type="password" id="regPassword" placeholder="Password">
+            <input type="password" id="confirmPassword" placeholder="Confirm Password" oninput="validatePassword()">
+            <div id="passwordMessage"></div>
+            <button type="button" onclick="submitRegisterForm()">Register</button>
+        </form>
+    </div>
+
+    <!-- Include jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <!-- Include your JavaScript files -->
+    <script src="path/to/your/login.js"></script>
+    <script src="path/to/your/register.js"></script>
+
+    <!-- Add your custom scripts or additional libraries here if needed -->
+
+</body>
+</html>
