@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="..\CSS\Register.css">
+</head>
+<body>
+
+    <form action="../DATABASE/Registration.php" method="post" id="myForm">
+        <h2>Registration</h2>
+        <div class="form-group-double">
+            <div class="form-group">
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" required>
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="email">Email ID:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <div class="form-group">
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" oninput="validatePassword()" required>
+            <span id="passwordMessage"></span>
+        </div>
+        
+        <div class="form-group">
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+        </div>           
+        
+        <div class="form-group">
+            <label for="mobileNumber">Mobile Number:</label>
+            <input type="tel" id="mobileNumber" name="mobileNumber" required>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Register" onclick="submitForm()" >
+        </div>
+        <div class="form-group">
+            <a href="Login.html">LOGIN</a>
+        </div>
+    </form>
+
+
+    <script src="../JS/Register.js"></script>
+</body>
+</html>
