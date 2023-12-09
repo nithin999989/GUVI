@@ -19,5 +19,8 @@
             echo "<h3 style ='position: absolute;top: 0%;' ><font color=\"red\">* Userid and password didn't match up.</font></h3>";
         }
     }
+          
+    $redis = new Predis\Client();
+    $redis->connect('127.0.0.1', 6379);
 
 ?>
