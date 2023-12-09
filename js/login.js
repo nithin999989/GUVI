@@ -23,10 +23,13 @@ function login() {
     var storedPassword = localStorage.getItem("password");
 
     // Check if entered credentials match stored credentials
-    if (enteredUsername === storedUsername && enteredPassword === storedPassword) {
+    if (enteredUsername === storedUsername && enteredPassword === storedPassword) 
+    {
         alert("Login successful!");
        
-    } else {
+    } 
+    else 
+    {
         alert("Invalid username or password.");
     }
 }
