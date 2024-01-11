@@ -11,19 +11,23 @@ function validatePassword() {
         message.style.color = "red";
     }
 }
-function submitForm() 
-{
+function submitForm() {
     var formData = $("#myForm").serialize();
 
     $.ajax({
         type: "POST",
         url: "../DATABASE/Register.php",
-        data: formData
-        // success: function(response) {
-        //     $("#result").html("Relationship: " + response);
-        // }
+        data: formData,
+        success: function(response) {
+            // Assuming the server responds with a success message
+            $("#result").html("Registration successful: " + response);
+        },
+        error: function(error) {
+            $("#result").html("Registration failed: " + error);
+        }
     });
 }
+
 
 function register() {
    
